@@ -27,14 +27,14 @@ public class LojaController {
 		produto.setDescricao("Televisor Tela Plana de Plasma FullHD");
 		produto.setPreco(5467.99);
 		produto.setCodigoBarras("JLDFOWHBSNHSB12345");
-		
+		produto.setCodStatus(false);
 		Produto produto2 = new Produto();
 		produto2.setId(21l);
 		produto2.setNome("Máquina de Lavar 15l");
 		produto2.setDescricao("Máquina de lavar Brastemp com painel digital");
 		produto2.setPreco(2364.99);
 		produto2.setCodigoBarras("AFGFDVGTBDFGRE12345");
-		
+		produto.setCodStatus(true);
 		// Adicionando Produtos a lista
 		listaDeProdutos.add(produto);
 		listaDeProdutos.add(produto2);
