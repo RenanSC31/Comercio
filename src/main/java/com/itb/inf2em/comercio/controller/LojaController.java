@@ -1,7 +1,9 @@
 package com.itb.inf2em.comercio.controller;
 
 import java.util.ArrayList;
+
 import java.util.List;
+ import org.springframework.web.bind.annotation.PostMapping;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -45,9 +47,15 @@ public class LojaController {
 	}
 	
 	@GetMapping("/novo-produto")
-	public String novoProduto() {
-		
+	public String novoProduto(Produto produto, Model model) {
+		model.addAttribute("produto", produto);
 		return "novo-prod";
+	}
+	@PostMapping("/add-prod")
+	public String gravarnovoproduto(Produto produto){
+		listaDeProdutos.add(produto);
+		return "redirect:/comercio/produtos/listar";
+		
 	}
 	
 }
